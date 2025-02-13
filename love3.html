@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love-Themed Experience</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="love3.css">
+</head>
+<body>
+  <button class="btn btn-outline-dark toggle-theme-btn" onclick="toggleTheme()">Toggle Theme</button>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Love Hub</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#love-calculator">Love Calculator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#poems">Love Poems</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#greeting-cards">Greeting Cards</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Gallery</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Welcome to Love Hub</h1>
+      <p class="lead">Celebrate love with poems, greetings, and fun experiences.</p>
+    </div>
+  </section>
+
+  <section id="love-calculator" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Love Calculator</h2>
+      <form id="love-form" class="text-center">
+        <div class="mb-3">
+          <input type="text" id="name1" class="form-control" placeholder="Your Name" required>
+        </div>
+        <div class="mb-3">
+          <input type="text" id="name2" class="form-control" placeholder="Partner's Name" required>
+        </div>
+        <button type="button" class="btn btn-danger" onclick="calculateLove()">Calculate Love</button>
+      </form>
+      <h3 id="love-result" class="mt-4 text-center"></h3>
+      <div class="col-md-4">
+        <img src="https://media1.giphy.com/media/4CiQLMDpJcorOfLMUm/200w.gif?cid=6c09b952onyc7wtyw3mao1kj0ujf1xsv18t218a8u6luij58&ep=v1_gifs_search&rid=200w.gif&ct=g" alt="Taj Mahal">
+      </div>
+    </div>
+  </section>
+
+
+  <button class="btn btn-danger mt-4" onclick="launchConfetti()">Celebrate Love</button>
+
+
+
+  <section id="poems" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Generate a Love Poem</h2>
+      <div class="text-center">
+        <button class="btn btn-outline-danger" onclick="generatePoem()">Generate Poem</button>
+      </div>
+      <p id="poem-output" class="mt-4 text-center"></p>
+    </div>
+  </section>
+ 
+</audio>
+  <section id="greeting-cards" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Love Greeting Cards</h2>
+      <div class="row text-center">
+        <div class="col-md-4 mb-4">
+          <div class="card p-3">
+            <h5 class="card-title">Happy Valentine's Day</h5>
+            <p class="card-text">Wishing you a day filled with love and joy.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card p-3">
+            <h5 class="card-title">Forever Yours</h5>
+            <p class="card-text">My love for you grows stronger each day.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card p-3">
+            <h5 class="card-title">Endless Love</h5>
+            <p class="card-text">You are my heart and my soul, forever.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="compatibility-quiz" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="mb-4">Love Compatibility Quiz</h2>
+      <p>Answer a few questions to check your love compatibility!</p>
+      <div id="quiz-questions">
+        <p>Do you enjoy the same movies?</p>
+        <button class="btn btn-outline-danger" onclick="answerQuestion('Yes')">Yes</button>
+        <button class="btn btn-outline-secondary" onclick="answerQuestion('No')">No</button>
+      </div>
+      <h3 id="quiz-result" class="mt-4"></h3>
+    </div>
+  </section>
+  
+  <section id="fortune-teller" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="mb-4">Love Fortune Teller</h2>
+      <button class="btn btn-outline-danger" onclick="generateFortune()">Reveal Your Fortune</button>
+      <p id="fortune-output" class="mt-4"></p>
+    </div>
+  </section>
+  <section id="gallery" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Love Gallery</h2>
+      <div class="d-flex justify-content-center flex-wrap gap-3">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/valentine-day-quotes-vincent-van-gogh-655d30232d181.png?crop=1xw:1xh;center,top&resize=980:*" 
+             alt="Love Animation" class="love-gif" style="max-width: 300px; height: auto;">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/gh-valentines-day-quotes-mahatma-gandhi-1668097304.png" 
+             alt="Heart Animation" class="love-gif" style="max-width: 300px; height: auto;">
+             <img src="https://i.pinimg.com/736x/12/1c/02/121c029773977aaa3088da3f2392335c.jpg" 
+             alt="Heart Animation" class="love-gif" style="max-width: 300px; height: auto;">
+             <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/rockcms/2024-01/valentines-day-quotes-swl-230110-13-fbfa60.jpg" 
+             alt="Heart Animation" class="love-gif" style="max-width: 300px; height: auto;">
+             <img src="https://hips.hearstapps.com/hmg-prod/images/valentines-day-quotes-reese-witherspoon-675b504cca724.png?crop=1xw:1xh;center,top&resize=980:*" 
+             alt="Heart Animation" class="love-gif" style="max-width: 300px; height: auto;">
+             <img src="https://hips.hearstapps.com/hmg-prod/images/valentines-day-quotes-jo-lightfoot-675b5140d51f0.png?crop=1xw:1xh;center,top&resize=980:*" 
+             alt="Heart Animation" class="love-gif" style="max-width: 300px; height: auto;">
+             <img src="https://hips.hearstapps.com/hmg-prod/images/gh-valentines-day-quotes-roy-a-ngansop-1668097951.png?crop=1xw:1xh;center,top&resize=980:*" 
+             alt="Heart Animation" class="love-gif" style="max-width: 300px; height: auto;">
+      </div>
+    </div>
+  </section>
+  
+  <h1>my proposal</h1> 
+  <audio controls>
+    <source src="Ishq.mp3" type="audio/mpeg">
+    your audio does not support the element
+  
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Love Hub. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="love3.js"></script>
+</body>
+</html>
